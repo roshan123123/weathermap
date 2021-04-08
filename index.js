@@ -41,13 +41,19 @@ app.post("/",function (req,res)//to respond to req from form
      });
      }
      else{
-         res.sendFile(__dirname+"/index.html");
+         res.sendFile(__dirname+"/failure.html");
 
      }
 
 
  });//works without ; also
 
+
+});
+
+app.post("/failure",function (req,res)
+{
+  res.redirect("/");
 
 });
 
